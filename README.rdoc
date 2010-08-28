@@ -1,3 +1,8 @@
+A few bug bugfixes: 
+* it seems ObjectID is a class from BSON::ObjectID and not Mongo's anymore. 
+* Also it was failing when calling lock_next on an empty queue. I hacked it but it needs a better fix...
+* required 'openhash' (is this really needed?)
+
 = Mongo::Queue
 
 An extensible thread safe job/message queueing system that uses mongodb as the persistent storage engine.
